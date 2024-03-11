@@ -1,0 +1,20 @@
+h1{
+text-align: center;    
+}
+#container{
+    border: 2px solid black;
+    height: 500px;
+    width: 80%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content:flex-end;
+    flex-wrap: wrap;
+    align-items:flex-end;
+}
+#container div{
+    height: 120px;
+    width: 200px;
+    color: white;
+    font-size: 1.5;
+}

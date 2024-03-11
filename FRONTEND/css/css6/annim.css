@@ -1,0 +1,31 @@
+.box{
+   height: 100px;
+   width: 300px;
+   background-color: pink;
+   animation:  shi 3s ease-in 0s infinite normal;
+}
+@keyframes shi{
+    from{ font-size: 20px;
+    width :10px;
+   }
+    
+    to{
+      font-size: 40px;
+    
+      width: 400px;
+      border-radius: 19px;
+    }
+    0%{
+        background-color: green;
+       }
+       50%
+       {
+        background-color: yellow;
+       }
+       100%
+       {
+        background-color: blue;
+       }
+}
+
+    

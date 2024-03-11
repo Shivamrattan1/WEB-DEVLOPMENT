@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 2000px; /* Add some height to enable scrolling */
+        }
+        #hoverDiv {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 20px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load Event
+            console.log('Page is loaded');
+
+            // Mouseover Event
+            var hoverDiv = document.getElementById('hoverDiv');
+            hoverDiv.addEventListener('mouseover', function() {
+                console.log('Mouseover event occurred');
+            });
+
+            // Mouseout Event
+            hoverDiv.addEventListener('mouseout', function() {
+                console.log('Mouseout event occurred');
+            });
+
+            // Keypress Event
+            document.addEventListener('keypress', function(event) {
+                console.log('Keypress event occurred. Key pressed:', event.key);
+            });
+
+            // Scroll Event
+            window.addEventListener('scroll', function() {
+                console.log('Scroll event occurred. Scroll position:', window.scrollY);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="hoverDiv"></div>
+    <p>Scroll down to see the scroll event in action.</p>
+</body>
+</html>

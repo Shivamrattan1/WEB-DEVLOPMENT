@@ -1,0 +1,36 @@
+#face{
+    width: 400px;
+    height: 400px;
+    background-color: #ffa511;
+    border-radius: 50%;
+}
+#eye1{
+    width: 35px;
+    height: 35px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+    left: 110px;
+
+   
+}
+#eye2{
+    width: 35px;
+    height: 35px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+    left: 265px;
+}
+#smile{
+    height: 75px;
+    width:  200px;
+    background-color: brown;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    position: absolute;
+    top: 250px;
+    left: 110px;
+}

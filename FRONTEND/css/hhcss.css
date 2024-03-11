@@ -1,0 +1,24 @@
+*
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h3,h1
+{
+    color: #b92b27;
+}
+
+#follow{
+    color: blue;
+    background-color: yellow;
+}
+.upvote{
+    background-color: greenyellow;
+    color:magenta;
+}
+p a{
+    color: purple;
+    background-color: yellow;
+}
+nav ul li a{
+    color: hotpink;
+}

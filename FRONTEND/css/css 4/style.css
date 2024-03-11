@@ -1,0 +1,20 @@
+div{
+    height: 200px;
+    width: 200px;
+    background-color: rgba(181, 37, 164, 0.7);
+   
+}
+#shaka{
+    background-color: yellow;
+    opacity: 0.99;
+}
+#shakala{
+    background-color: green;
+    height:200px;
+    width: 200px;
+    transition: 2s 1s;
+}
+#shakala:hover{
+border-radius: 50%;
+background-color: black;
+}

@@ -1,0 +1,16 @@
+div{
+    height: 200px;
+    padding: 10px;
+    text-align: center;
+    margin: 15px;
+    border: 5px solid black;
+    border-left-color: blue;
+    border-right: 3px dashed green;
+
+}
+h1{
+    text-align: center;
+    border-style: dashed;
+    border-width: 2px;
+    border-color: bl;
+}

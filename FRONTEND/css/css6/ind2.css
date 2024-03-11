@@ -1,0 +1,16 @@
+.container{
+    width: 600px;
+    height: 300px;
+    display: grid;
+    grid-gap: 10px 10px;
+    grid-template-columns:  100PX 100PX 100PX  ;
+    grid-template-rows: 50PX 50PX ;
+    background-color: black;
+   
+}
+.item{
+        height: 50PX;
+        width: 100PX;
+    background-color: greenyellow;
+    border: 2px solid black;
+}                                                                                  

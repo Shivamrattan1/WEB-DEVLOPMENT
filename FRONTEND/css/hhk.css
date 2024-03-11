@@ -1,0 +1,15 @@
+div{
+    background-color: blueviolet;
+}
+h3{
+    background-color: blue;
+}
+p{
+    background-color: yellow;
+}
+span{
+    background-color: green;
+}
+button{
+    background-color: inherit;
+}

@@ -1,0 +1,21 @@
+h2{
+    display: inline;
+    background-color: aquamarine;
+    border: 2px solid black;
+    height: 100px;
+    width: 50px;
+    padding: 50px;
+    margin : 50px;
+}
+span{
+    display: block;
+    background-color: pink;
+}
+span{
+    border: 2px solid black;
+    height: 100px;
+    width: 50px;
+    padding: 50px;
+    margin : 50px;
+    /*padding only at left and right*/
+}

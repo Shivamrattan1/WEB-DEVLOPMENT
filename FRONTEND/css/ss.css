@@ -1,0 +1,25 @@
+button:active{
+    background-color: black;
+    color: white;
+}
+
+p:active{
+font-weight: bold;
+     
+}
+input[type="radio"]:checked+ label{
+    font-weight: bolder;
+    font-size: 150%;
+}
+div:nth-of-type(2n){
+    background-color: lightpink;
+}
+h1::first-letter{
+    color: blue;
+}
+#PARA::first-line{
+
+color: green}
+#PARA::selection{
+   background-color: yellow;
+}

@@ -1,0 +1,24 @@
+p +h3{
+    text-decoration: underline;
+}
+
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+.upvote + button{
+    background-color: rgb(140, 140, 164);
+    color: blue;
+}
+h1 > button {
+    color: violet;
+}
+input[type="text"]
+{
+    color: red;
+}
+input[type="password"]{
+    color: green;
+}
+#myid p{
+    color: green;
+}

@@ -1,0 +1,19 @@
+h3
+{
+    font-weight: normal;
+    text-decoration: wavy underline;
+    
+}
+p
+{
+    font-weight: 800;
+    text-decoration:  dotted overline;
+    text-decoration-color: blue;
+}
+h1
+{
+    font-weight: bold;
+    text-decoration:line-through ;
+    text-decoration-color: red ;
+    font-family:arial;
+}

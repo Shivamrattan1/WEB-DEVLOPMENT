@@ -1,0 +1,39 @@
+
+h2{
+    color: goldenrod;
+}
+span
+{
+  color: brown;
+}
+h4{
+    text-align: right;
+    color: blue;
+}
+.card{
+   height: 530px;
+   width: 310px;
+   border: 2px solid black;
+   border-radius: 20px;
+   padding: 10px 10px;
+}
+img{
+    height:200px ;
+    width: 300px;
+}
+p{
+    height: 320px;
+    width: 300px;
+}
+
+
+#pets{
+    display: flex;
+    justify-content: space-evenly;
+}
+@media(max-width:375px)
+{
+    #pets{
+        flex-wrap: wrap;
+    }
+}

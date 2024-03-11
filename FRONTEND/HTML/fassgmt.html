@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="black">
+        <caption>Student Information</caption>
+        <tr>
+            <th rowspan="6">Info</th>
+            <th rowspan="2">Name</th>
+            <th colspan="2">Address</th>
+        </tr>
+         <tr>
+            <th>City</th>
+            <th>House</th>
+         </tr>
+         <tr>
+            <td>A</td>
+            <td>Delhi</td>
+            <td>1</td>
+         </tr>
+         <tr>
+            <td>B</td>
+            <td>Mumbai</td>
+            <td>2</td>
+         </tr>
+         <tr>
+            <td>C</td>
+            <td>Kolkata</td>
+            <td>3</td>
+         </tr>
+         <tr>
+            <td>D</td>
+            <td>Pune</td>
+            <td>4</td>
+         </tr>
+    </table>
+    <hr>
+    <form action="/action">
+        <label for="name">Name:</label>
+        <input id="name" name="Name" type="text"><br>
+        sex:
+        <input type="radio" id="c" value="male" name="sex">
+        <label for="c">Male</label>
+        <input type="radio" name="sex" value="female" id="f">
+        <label for="f">Female</label>
+        <br>
+        <label for="z"> Country:</label>
+        <select id="z" name="cou">
+         <option selected>select an option</option>
+         <option value="USA">USA</option>
+         <option value="India">India</option>
+         <option value="Africa">Africa</option>
+        </select>
+        <br>
+        Message:
+        <br>
+        <textarea  name="Message" rows="4" col="6"></textarea>
+        <br>
+        <input type="checkbox" name="sub" value="yes" id="re">
+        <label for="re">Subscribe?</label>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <hr>
+    <h2>Feedback Form</h2>
+    <form action="/action">
+    <label>Name:<input type="text"  name="name" placeholder="Write your name"></label><br>
+    <label>Email:<input type="text"  name="email" placeholder="Write your email"></label>
+    <br>
+    Message:
+    <br>
+    <textarea name="MESS" rows="4" cols="6"></textarea>
+    <br>
+    Rate us out of 5:
+    <br>
+    <label><input type="radio" value="1" name="rate">1</label> <br>
+    <label><input type="radio" value="2" name="rate">2</label> <br>
+    <label><input type="radio" value="3" name="rate">3</label> <br>
+    <label><input type="radio" value="4" name="rate">4</label> <br>
+    <label><input type="radio" value="5" name="rate">5</label> <br>
+    <button typ="submit">Send Your Message!</button>
+    </form>
+</body>
+</html>
