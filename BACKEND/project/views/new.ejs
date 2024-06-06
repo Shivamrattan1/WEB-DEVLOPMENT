@@ -1,0 +1,49 @@
+<% layout("/layouts/boillerplate")%>
+<body>
+    <div class="row">
+        <div class="col-8 offset-2" >
+    <h3>Create New Listing</h3>
+    <br>
+    <br>
+    <form action="/listings" method="POST" novalidate class="needs-validation">
+
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" placeholder="enter-title" name="listing[title]"class="form-control" required>
+            <div class="invalid-feedback">Add a valid Title</div>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea name="listing[description]" rows="4" cols="50" class="form-control" required></textarea>
+            <div class="invalid-feedback">Add a valid Discription</div>
+            
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Image</label>
+            <input placeholder="enter image-url/link" name="listing[image]" class="form-control">
+            
+        </div>
+        <div class="row">
+            <div class="mb-3 col-md-4">
+                <label for="price"  class="form-label">Price</label>
+                <input type="number" placeholder="1200" name="listing[price]" class="form-control"  required>
+                <div class="invalid-feedback">Add a valid Price</div>
+            </div>
+            <div class="mb-3 col-md-4">
+                <label for="country" class="form-label">Country</label>
+                <input type="text" placeholder="India" name="listing[country]" class="form-control"  required>
+                <div class="invalid-feedback">Add a valid Country</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input type="text" placeholder="enter-location" name="listing[location]" class="form-control"  required>
+            <div class="invalid-feedback">Add a valid Location</div>
+        </div>
+        
+        <br>
+        <button class="btn btn-dark add-btn">ADD</button>
+    </form>
+</div>
+</div>
+</body>
