@@ -3,7 +3,7 @@
     <div class="row mt-3">
     <div class="col-8 offset-2">
     <h3>Edit Your Listing</h3>
-    <form action="/listings/<%=listing._id%>?_method=PUT" method="POST" novalidate class="needs-validation">
+    <form action="/listings/<%=listing._id%>?_method=PUT" method="POST" novalidate class="needs-validation" enctype="multipart/form-data">
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
             <input type="text" placeholder="enter-title" name="listing[title]" value="<%=listing.title%>" class="form-control" required>
@@ -15,8 +15,12 @@
             <div class="invalid-feedback">Add a valid Discription</div>
         </div>
         <div class="mb-3">
+            <h3>Original image</h3>
+            <img src="<%= oriimg %>" >
+        </div>
+        <div class="mb-3">
             <label for="image" class="form-label">Image</label>
-            <input placeholder="enter image-url/link" name="listing[image]" value="<%=listing.image%>" class="form-control" required>
+            <input type="file" placeholder="Upload new Image" name="listing[image]"  class="form-control" >
             <div class="invalid-feedback">Add a valid Image</div>
         </div>
         <div class="row">
@@ -36,8 +40,18 @@
             <input type="text" placeholder="enter-location" name="listing[location]"  class="form-control" value="<%=listing.location%>" required>
             <div class="invalid-feedback">Add a valid Location</div>
         </div>
-        
-
+        <div class="row">
+        <div class="mb-3 col-md-4">
+            <label for="Coordinate length"  class="form-label">Coordinate</label>
+            <input type="number" placeholder="0.00" name="coordinate[length]" class="form-control" step="0.01"  required>
+            <div class="invalid-feedback">Add a valid Coordinate lenght</div>
+        </div>
+        <div class="mb-3 col-md-4">
+            <label for="Coordinate Breadth"  class="form-label">Coordinate</label>
+            <input type="number" placeholder="0.00" name="coordinate[breath]" class="form-control" step="0.01" required>
+            <div class="invalid-feedback">Add a valid Coordinate Breadth</div>
+        </div>
+        </div>
         <button class="btn btn-dark   add-btn mt-3">Edit</button>
     </form>
 </div>
