@@ -1,31 +1,33 @@
-import mongoose  from "mongoose";
-const Schema=mongoose.Schema;
-import Review from "./review.js";
-const listingSchema=new Schema({
-    title:{
-        type:String,
-        required:true,
-    },
-    description:String,
-    image:{
-        type:String,
-        default:"https://plus.unsplash.com/premium_photo-1710800032613-6e528143e119?q=80&w=1022&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        set : (v)=>v==""?"https://plus.unsplash.com/premium_photo-1710800032613-6e528143e119?q=80&w=1022&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D":v,
-    },
-    price:Number,
-    location:String,
-    country:String,
-    reviews:[
-        {
-            type: Schema.Types.ObjectId,
-            ref:"Review",
-        }
-    ]
-});
-listingSchema.post("findOneAndDelete",async (listing)=>{
-    if(listing){
-        let res=await Review.deleteMany( {_id: {$in: listing.reviews}})
+import express from "express";
+const router=express.Router();
+import wrapAsync from "../../util/wrapAsync.js";
+import ExpressError from "../../util/ExpressError.js";
+import { listingSchema,reveiwSchema } from "../../schema.js";
+import Listing from "../listing.js";
+import {isLoggedIn} from "../../middleware.js";
+import { isOwner } from "../../middleware.js";
+import { new1,index,show,new2,edit1,edit2,delete1 } from "../../controller/listing.js";
+import multer from "multer";
+import { storage} from "../../cloud.js";
+const upload=multer({storage});
+const ValidateListing=(req,res,next)=>{
+    let {error}=listingSchema.validate(req.body);
+    if(error){
+      let errmsg=error.details.map((el)=>el.message).join(",");
+      throw new ExpressError(400,errmsg);
     }
-});
-const listing = mongoose.model("listing",listingSchema);
-export default listing;
+    else{
+      next();
+    }
+  }
+  router.route("/")
+    .get( wrapAsync(index))
+    // .post(ValidateListing,wrapAsync(new2));
+    .post(isLoggedIn,upload.single('listing[image]'),wrapAsync(new2))
+  router.get("/new",isLoggedIn,new1);
+  router.get("/:id",wrapAsync(show));
+  router.get("/:id/edit",isLoggedIn,isOwner,wrapAsync(edit1))
+  router.put("/:id",upload.single('listing[image]'),isLoggedIn,isOwner,ValidateListing, wrapAsync(edit2))
+  
+  router.delete("/:id",isLoggedIn,isOwner, wrapAsync(delete1))
+  export default router;
